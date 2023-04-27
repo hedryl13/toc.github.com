@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel = "icon" href = "logo TOC.jpg" type = "image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TOC | Log In</title>
+	<style type="text/css">
+		
+
+body{
+	font-family: century gothic;
+	background-color: #a0a0a0;
+}
+
+.welcome{
+
+    font-size: 35px;
+}
+.center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background-color: black;
+        border-radius: 7px;
+        margin-top: 10px;
+        padding-top: 50px;
+        box-shadow: 0 5px 5px 2px #000000;
+       }
+       
+       .center p{
+        text-align: center;
+        padding: 0 0 20px 0;
+        border-bottom: 3px solid silver;
+
+       }
+
+       .center form{
+        padding: 0 30px;
+        box-sizing: border-box;
+       }
+
+       form .txtfield{
+        position: relative;
+        border-bottom: 2px solid #adadad;
+        margin: 30px 0;
+       }
+
+       .txtfield input{
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        background: none;
+        outline: none;
+        color: #ffffff;
+       }
+
+       .txtfield label{
+        position: absolute;
+        top: 50%;
+        left:5%;
+        color: #adadad;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: .5s;
+        font-size:  16px;
+
+       }
+
+       .txtfield span::before{
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: blueviolet;
+        transition: .5s;
+       }
+
+       .txtfield input:focus~label,
+       .txtfield input:valid~label{
+        top: -5px;
+        color: mediumvioletred;
+       }
+
+       .txtfield input:focus~span::before,
+       .txtfield input:valid~span::before{
+        width: 100%;
+       }
+
+       .pass{
+        margin: -5px 0 20px 5px;
+        color: #ffffff;
+        cursor: pointer;
+        text-align: center;
+       }
+
+       .pass:hover{
+        text-decoration: underline;
+       }
+
+       .signuplink{
+        margin: 35px 0;
+        text-align: center;
+        font-size: 16px;
+        color: white;
+        top: 5px;
+       }
+
+       .signuplink a{
+        text-decoration: none;
+        color: white;
+       }
+
+       .signuplink a:hover{
+        text-decoration: underline;
+       }
+
+    #a1{
+      margin-left: 25%;
+      width: 50%;
+      height: 25px;
+      background-color: #000000;
+      text-align: center;
+      padding-top: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #a1 a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    #a1 a:hover{
+      text-decoration: underline;
+      color: cyan;
+      letter-spacing: 1px;
+      transition: .75s;
+    }
+
+    button:hover{
+        box-shadow: 2px 2px #a0a0a0;
+        transition:  .3s ease;
+    }
+
+
+
+
+	.cursor{
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 0;
+	    height: 0;
+	    transform: translateX(-50%) translateY(-50%);
+	    transition: all 100ms ease-out;
+	    border-left: 10px solid transparent;
+	    border-right: 10px solid transparent;
+	    border-bottom: 10px solid rgb(210,25,25);
+ 	   z-index: 10;
+}
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+     <script type="text/javascript">
+    alert('Successfully Created!');
+  </script>
+
+
+	<!--
+	<div class="cursor" id="cursor"></div>
+	<script>
+		var cursor = document.getElementById("cursor");
+window.addEventListener("mousemove", function (event) {
+    cursor.style.left = event.clientX + "px";
+    cursor.style.top = event.clientY + "px";
+});
+	</script>
+-->
+
+	<div class = "center">
+	<p style = "color: white; text-shadow: 5px 5px black"><b class = "welcome">WELCOME!</b><br><br> Use your newly created account to Log In!</p><br>
+   <form action = "index.html" method="post" onsubmit="return storeUsername()">
+
+   <div class = "txtfield">
+   	<input type="text" id = "username" required>
+   	<span></span>
+   	<label>Username</label>
+   </div>
+
+   <div class = "txtfield">
+   	<input type="password" id = "password" required>
+   	<span></span>
+   	<label>Password</label>
+   </div>
+
+   <div class = "pass">Forgot Password?</div>
+<br>
+
+   <div class = "signuplink">Not a member? <a href = "#">Sign Up</a></div>
+</div>
+</form>
+
+<div class ="abtn">
+<button href = "index.html" class = "login-btn" onclick = "func()" style = "color: white; font-family: century gothic; background-color: black; border-radius: 3px; height: 40px; width: 15%; position: absolute; top: 75%; left: 42.5% ; cursor: pointer;">Log In</button>
+</div>
+
+
+
+<script>
+		function func() {
+			var email = document.getElementById("username").value;
+			var pass = document.getElementById('password').value;
+
+			if (email == 'edrel'&& pass == 'edrel'){
+				alert("Succesful!")
+				window.location.assign("index.html")
+			}
+			else{
+				alert("Invalid!")
+			}
+		}
+	</script>
+
+</body>
+</html>
